@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pose Detection</title>
+    <style>
+        #poseResult {
+            font-size: 24px;
+            font-weight: bold;
+            color: #4CAF50;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<h1>HelloWorld</h1>
+<video id="video" width="640" height="480" autoplay muted></video>
+<canvas id="canvas" width="640" height="480"></canvas>
+<div id="poseResult">Detected Pose: </div>
+<button id="savePoseButton">Save Pose</button>
+<select id="poseSelector">
+    <option value="">Select Pose</option>
+    <option value="Rest">Rest</option>
+    <option value="Double Bicep">Double Bicep</option>
+    <option value="Lat Spread">Lat Spread</option>
+    <option value="Most Muscular">Most Muscular</option>
+</select>
+<div id="poseCounter">Saved poses for current pose: 0</div>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/pose@0.8/dist/teachablemachine-pose.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.5.0/jszip.min.js"></script>
+<script src="./app.js" type="module"></script>
+</body>
+</html>
